@@ -1,0 +1,221 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.68.3"><meta name=description content="Documentation QWC2 and QWC services"><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon><title>QWC Config Generator :: QWC2 Documentation</title><link href=/css/nucleus.css?1632148594 rel=stylesheet><link href=/css/fontawesome-all.min.css?1632148594 rel=stylesheet><link href=/css/hybrid.css?1632148594 rel=stylesheet><link href=/css/featherlight.min.css?1632148594 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1632148594 rel=stylesheet><link href=/css/auto-complete.css?1632148594 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1632148594 rel=stylesheet><link href=/css/theme.css?1632148594 rel=stylesheet><link href=/css/tabs.css?1632148594 rel=stylesheet><link href=/css/hugo-theme.css?1632148594 rel=stylesheet><link href=/css/theme-green.css?1632148594 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1632148594></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/services/qwc-config-generator/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href><img src=/images/qwc-logo.png height=50></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1632148594></script><script type=text/javascript src=/js/auto-complete.js?1632148594></script><script type=text/javascript>var baseurl="http:\/\/example.org\/";</script><script type=text/javascript src=/js/search.js?1632148594></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/overview/ title=Overview class=dd-item><a href=/overview/>Overview</a><ul><li data-nav-id=/overview/overview.de/ title=Übersicht class=dd-item><a href=/overview/overview.de/>Übersicht</a></li></ul></li><li data-nav-id=/quick-start/ title="Quick Start" class=dd-item><a href=/quick-start/>Quick Start</a></li><li data-nav-id=/configuration/ title=Configuration class=dd-item><a href=/configuration/>Configuration</a></li><li data-nav-id=/viewer/ title="QGIS Web Client 2" class=dd-item><a href=/viewer/>Viewer</a></li><li data-nav-id=/services/ title=Services class="dd-item
+parent"><a href=/services/>Services</a><ul><li data-nav-id=/services/qwc-map-viewer/ title="QWC Map Viewer Service" class=dd-item><a href=/services/qwc-map-viewer/>qwc-map-viewer</a></li><li data-nav-id=/services/qwc-ogc-service/ title="QWC OGC Service" class=dd-item><a href=/services/qwc-ogc-service/>qwc-ogc-service</a></li><li data-nav-id=/services/qwc-feature-info-service/ title="QWC FeatureInfo Service" class=dd-item><a href=/services/qwc-feature-info-service/>qwc-feature-info-service</a></li><li data-nav-id=/services/qwc-fulltext-search-service/ title="QWC Fulltext Search Service" class=dd-item><a href=/services/qwc-fulltext-search-service/>qwc-fulltext-search-service</a></li><li data-nav-id=/services/qwc-legend-service/ title="QWC Legend Service" class=dd-item><a href=/services/qwc-legend-service/>qwc-legend-service</a></li><li data-nav-id=/services/qwc-permalink-service/ title="QWC Permalink Service" class=dd-item><a href=/services/qwc-permalink-service/>qwc-permalink-service</a></li><li data-nav-id=/services/qwc-print-service/ title="QWC Print service" class=dd-item><a href=/services/qwc-print-service/>qwc-print-service</a></li><li data-nav-id=/services/qwc-mapinfo-service/ title="QWC MapInfo Service" class=dd-item><a href=/services/qwc-mapinfo-service/>qwc-mapinfo-service</a></li><li data-nav-id=/services/qwc-data-service/ title="QWC Data Service" class=dd-item><a href=/services/qwc-data-service/>qwc-data-service</a></li><li data-nav-id=/services/qwc-document-service/ title="Document service" class=dd-item><a href=/services/qwc-document-service/>qwc-document-service</a></li><li data-nav-id=/services/qwc-elevation-service/ title="QWC Elevation Service" class=dd-item><a href=/services/qwc-elevation-service/>qwc-elevation-service</a></li><li data-nav-id=/services/qwc-admin-gui/ title="QWC Admin GUI" class=dd-item><a href=/services/qwc-admin-gui/>qwc-admin-gui</a></li><li data-nav-id=/services/qwc-registration-gui/ title="Registration GUI" class=dd-item><a href=/services/qwc-registration-gui/>qwc-registration-gui</a></li><li data-nav-id=/services/qwc-config-generator/ title="QWC Config Generator" class="dd-item active"><a href=/services/qwc-config-generator/>qwc-config-generator</a></li></ul></li><li data-nav-id=/authentication/ title=Authentication class=dd-item><a href=/authentication/>Authentication</a><ul><li data-nav-id=/authentication/qwc-db-auth/ title="DB Authentication Service" class=dd-item><a href=/authentication/qwc-db-auth/>qwc-db-auth</a></li><li data-nav-id=/authentication/qwc-ldap-auth/ title="LDAP Authentication Service" class=dd-item><a href=/authentication/qwc-ldap-auth/>qwc-ldap-auth</a></li></ul></li></ul><section id=footer></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/qwc-services/qwc-website/edit/main/content/services/qwc-config-generator.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/>QWC2 / QWC Services</a> > <a href=/services/>Services</a> > QWC Config Generator</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#setup>Setup</a></li><li><a href=#configuration>Configuration</a><ul><li><a href=#permissions>Permissions</a></li><li><a href=#custom-resource-types>Custom resource types</a></li></ul></li><li><a href=#usage>Usage</a><ul><li><a href=#script>Script</a></li><li><a href=#service>Service</a></li></ul></li><li><a href=#development>Development</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>QWC Config Generator</h1><p>Generate JSON files for service configs and permissions from WMS GetCapabilities, QGS projects and QWC ConfigDB.</p><h2 id=setup>Setup</h2><p>Create a ConfigGenerator config file <code>tenantConfig.json</code> for each tenant (see below).</p><h2 id=configuration>Configuration</h2><p>Example <code>tenantConfig.json</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://github.com/qwc-services/qwc-config-generator/raw/master/schemas/qwc-config-generator.json&#34;</span>,
+  <span style=color:#f92672>&#34;service&#34;</span>: <span style=color:#e6db74>&#34;config-generator&#34;</span>,
+  <span style=color:#f92672>&#34;config&#34;</span>: {
+    <span style=color:#f92672>&#34;tenant&#34;</span>: <span style=color:#e6db74>&#34;default&#34;</span>,
+    <span style=color:#f92672>&#34;config_db_url&#34;</span>: <span style=color:#e6db74>&#34;postgresql:///?service=qwc_configdb&#34;</span>,
+    <span style=color:#f92672>&#34;default_qgis_server_url&#34;</span>: <span style=color:#e6db74>&#34;http://localhost:8001/ows/&#34;</span>,
+    <span style=color:#f92672>&#34;qgis_projects_base_dir&#34;</span>: <span style=color:#e6db74>&#34;/data&#34;</span>,
+    <span style=color:#f92672>&#34;permissions_default_allow&#34;</span>: <span style=color:#66d9ef>true</span>
+  },
+  <span style=color:#f92672>&#34;themesConfig&#34;</span>: {
+      <span style=color:#f92672>&#34;defaultScales&#34;</span>: [<span style=color:#ae81ff>100000000</span>, <span style=color:#ae81ff>50000000</span>, <span style=color:#ae81ff>25000000</span>, <span style=color:#ae81ff>10000000</span>, <span style=color:#ae81ff>4000000</span>, <span style=color:#ae81ff>2000000</span>, <span style=color:#ae81ff>1000000</span>, <span style=color:#ae81ff>400000</span>, <span style=color:#ae81ff>200000</span>, <span style=color:#ae81ff>80000</span>, <span style=color:#ae81ff>40000</span>, <span style=color:#ae81ff>20000</span>, <span style=color:#ae81ff>10000</span>, <span style=color:#ae81ff>8000</span>, <span style=color:#ae81ff>6000</span>, <span style=color:#ae81ff>4000</span>, <span style=color:#ae81ff>2000</span>, <span style=color:#ae81ff>1000</span>, <span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>250</span>, <span style=color:#ae81ff>100</span>],
+      <span style=color:#f92672>&#34;defaultPrintGrid&#34;</span>: [{<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>10000000</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>1000000</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>1000000</span>}, {<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>1000000</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>100000</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>100000</span>}, {<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>100000</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>10000</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>10000</span>}, {<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>10000</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>1000</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>1000</span>}, {<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>1000</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>100</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>100</span>}, {<span style=color:#f92672>&#34;s&#34;</span>: <span style=color:#ae81ff>100</span>, <span style=color:#f92672>&#34;x&#34;</span>: <span style=color:#ae81ff>10</span>, <span style=color:#f92672>&#34;y&#34;</span>: <span style=color:#ae81ff>10</span>}],
+      <span style=color:#f92672>&#34;defaultWMSVersion&#34;</span>:<span style=color:#e6db74>&#34;1.3.0&#34;</span>,
+      <span style=color:#f92672>&#34;defaultBackgroundLayers&#34;</span>: [],
+      <span style=color:#f92672>&#34;defaultSearchProviders&#34;</span>: [<span style=color:#e6db74>&#34;coordinates&#34;</span>],
+      <span style=color:#f92672>&#34;defaultMapCrs&#34;</span>: <span style=color:#e6db74>&#34;EPSG:3857&#34;</span>,
+      <span style=color:#f92672>&#34;themes&#34;</span>: {
+        <span style=color:#f92672>&#34;items&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;title&#34;</span>: <span style=color:#e6db74>&#34;Demo&#34;</span>,
+            <span style=color:#f92672>&#34;url&#34;</span>: <span style=color:#e6db74>&#34;/ows/qwc_demo&#34;</span>,
+            <span style=color:#f92672>&#34;default&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;attribution&#34;</span>: <span style=color:#e6db74>&#34;Demo attribution&#34;</span>,
+            <span style=color:#f92672>&#34;attributionUrl&#34;</span>: <span style=color:#e6db74>&#34;https://127.0.0.1/&#34;</span>,
+            <span style=color:#f92672>&#34;backgroundLayers&#34;</span>: [
+                {
+                  <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;bluemarble&#34;</span>,
+                  <span style=color:#f92672>&#34;printLayer&#34;</span>: <span style=color:#e6db74>&#34;bluemarble_bg&#34;</span>,
+                  <span style=color:#f92672>&#34;visibility&#34;</span>: <span style=color:#66d9ef>true</span>
+                },
+                {
+                  <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;mapnik&#34;</span>,
+                  <span style=color:#f92672>&#34;printLayer&#34;</span>: <span style=color:#e6db74>&#34;osm_bg&#34;</span>
+                }
+            ],
+            <span style=color:#f92672>&#34;searchProviders&#34;</span>: [<span style=color:#e6db74>&#34;coordinates&#34;</span>],
+            <span style=color:#f92672>&#34;mapCrs&#34;</span>: <span style=color:#e6db74>&#34;EPSG:3857&#34;</span>,
+            <span style=color:#f92672>&#34;additionalMouseCrs&#34;</span>: [],
+            <span style=color:#f92672>&#34;extent&#34;</span>: [<span style=color:#ae81ff>-1000000</span>, <span style=color:#ae81ff>4000000</span>, <span style=color:#ae81ff>3000000</span>, <span style=color:#ae81ff>8000000</span>],
+            <span style=color:#f92672>&#34;skipEmptyFeatureAttributes&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;printResolutions&#34;</span>: [<span style=color:#ae81ff>300</span>],
+            <span style=color:#f92672>&#34;thumbnail&#34;</span>: <span style=color:#e6db74>&#34;default.jpg&#34;</span>
+          }
+        ],
+        <span style=color:#f92672>&#34;backgroundLayers&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;mapnik&#34;</span>,
+            <span style=color:#f92672>&#34;title&#34;</span>: <span style=color:#e6db74>&#34;Open Street Map&#34;</span>,
+            <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;osm&#34;</span>,
+            <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;osm&#34;</span>,
+            <span style=color:#f92672>&#34;thumbnail&#34;</span>: <span style=color:#e6db74>&#34;mapnik.jpg&#34;</span>,
+            <span style=color:#f92672>&#34;attribution&#34;</span>: <span style=color:#e6db74>&#34;OpenStreetMap contributors&#34;</span>,
+            <span style=color:#f92672>&#34;attributionUrl&#34;</span>: <span style=color:#e6db74>&#34;https://www.openstreetmap.org/copyright&#34;</span>
+          }
+        ]
+      }
+  },
+  <span style=color:#f92672>&#34;custom_resource_types&#34;</span>: [],
+  <span style=color:#f92672>&#34;services&#34;</span>: [
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;ogc&#34;</span>,
+      <span style=color:#f92672>&#34;generator_config&#34;</span>: {
+        <span style=color:#f92672>&#34;wms_services&#34;</span>: {
+          <span style=color:#f92672>&#34;online_resources&#34;</span>: {
+            <span style=color:#f92672>&#34;service&#34;</span>: <span style=color:#e6db74>&#34;http://localhost:8088/ows/&#34;</span>,
+            <span style=color:#f92672>&#34;feature_info&#34;</span>: <span style=color:#e6db74>&#34;http://localhost:8088/ows/&#34;</span>,
+            <span style=color:#f92672>&#34;legend&#34;</span>: <span style=color:#e6db74>&#34;http://localhost:8088/ows/&#34;</span>
+          }
+        }
+      },
+      <span style=color:#f92672>&#34;config&#34;</span>: {
+        <span style=color:#f92672>&#34;default_qgis_server_url&#34;</span>: <span style=color:#e6db74>&#34;http://qwc-qgis-server/ows/&#34;</span>
+      }
+    },
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;mapViewer&#34;</span>,
+      <span style=color:#f92672>&#34;generator_config&#34;</span>: {
+        <span style=color:#f92672>&#34;qwc2_config&#34;</span>: {
+          <span style=color:#f92672>&#34;qwc2_config_file&#34;</span>: <span style=color:#e6db74>&#34;../qwc-docker/volumes/qwc2/config.json&#34;</span>,
+          <span style=color:#f92672>&#34;qwc2_index_file&#34;</span>: <span style=color:#e6db74>&#34;../qwc-docker/volumes/qwc2/index.html&#34;</span>
+        }
+      },
+      <span style=color:#f92672>&#34;config&#34;</span>: {
+        <span style=color:#f92672>&#34;qwc2_path&#34;</span>: <span style=color:#e6db74>&#34;/qwc2/&#34;</span>,
+        <span style=color:#f92672>&#34;auth_service_url&#34;</span>: <span style=color:#e6db74>&#34;/auth/&#34;</span>,
+        <span style=color:#f92672>&#34;data_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/data/&#34;</span>,
+        <span style=color:#f92672>&#34;#document_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/document/&#34;</span>,
+        <span style=color:#f92672>&#34;elevation_service_url&#34;</span>: <span style=color:#e6db74>&#34;/elevation/&#34;</span>,
+        <span style=color:#f92672>&#34;#info_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/featureinfo/&#34;</span>,
+        <span style=color:#f92672>&#34;#legend_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/legend/&#34;</span>,
+        <span style=color:#f92672>&#34;mapinfo_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/mapinfo/&#34;</span>,
+        <span style=color:#f92672>&#34;ogc_service_url&#34;</span>: <span style=color:#e6db74>&#34;/ows/&#34;</span>,
+        <span style=color:#f92672>&#34;permalink_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/permalink/&#34;</span>,
+        <span style=color:#f92672>&#34;#print_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/print/&#34;</span>,
+        <span style=color:#f92672>&#34;search_data_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v1/data/&#34;</span>,
+        <span style=color:#f92672>&#34;search_service_url&#34;</span>: <span style=color:#e6db74>&#34;/api/v2/search/&#34;</span>
+      }
+    },
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;featureInfo&#34;</span>,
+      <span style=color:#f92672>&#34;config&#34;</span>: {
+        <span style=color:#f92672>&#34;default_qgis_server_url&#34;</span>: <span style=color:#e6db74>&#34;http://qwc-qgis-server/ows/&#34;</span>
+      }
+    },
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;search&#34;</span>,
+      <span style=color:#f92672>&#34;config&#34;</span>: {
+        <span style=color:#f92672>&#34;solr_service_url&#34;</span>: <span style=color:#e6db74>&#34;http://qwc-solr:8983/solr/gdi/select&#34;</span>,
+        <span style=color:#f92672>&#34;search_result_limit&#34;</span>: <span style=color:#ae81ff>50</span>,
+        <span style=color:#f92672>&#34;db_url&#34;</span>: <span style=color:#e6db74>&#34;postgresql:///?service=qwc_geodb&#34;</span>
+      },
+      <span style=color:#f92672>&#34;resources&#34;</span>: {
+        <span style=color:#f92672>&#34;facets&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;background&#34;</span>,
+            <span style=color:#f92672>&#34;filter_word&#34;</span>: <span style=color:#e6db74>&#34;Background&#34;</span>
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;foreground&#34;</span>,
+            <span style=color:#f92672>&#34;filter_word&#34;</span>: <span style=color:#e6db74>&#34;Map&#34;</span>
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;ne_10m_admin_0_countries&#34;</span>,
+            <span style=color:#f92672>&#34;filter_word&#34;</span>: <span style=color:#e6db74>&#34;Country&#34;</span>,
+            <span style=color:#f92672>&#34;table_name&#34;</span>: <span style=color:#e6db74>&#34;qwc_geodb.search_v&#34;</span>,
+            <span style=color:#f92672>&#34;geometry_column&#34;</span>: <span style=color:#e6db74>&#34;geom&#34;</span>,
+            <span style=color:#f92672>&#34;facet_column&#34;</span>: <span style=color:#e6db74>&#34;subclass&#34;</span>
+          }
+        ]
+      },
+      <span style=color:#f92672>&#34;permissions&#34;</span>: [
+        {
+          <span style=color:#f92672>&#34;role&#34;</span>: <span style=color:#e6db74>&#34;public&#34;</span>,
+          <span style=color:#f92672>&#34;permissions&#34;</span>: {
+            <span style=color:#f92672>&#34;dataproducts&#34;</span>: [
+              <span style=color:#e6db74>&#34;qwc_demo&#34;</span>
+            ],
+            <span style=color:#f92672>&#34;solr_facets&#34;</span>: [
+              <span style=color:#e6db74>&#34;foreground&#34;</span>,
+              <span style=color:#e6db74>&#34;ne_10m_admin_0_countries&#34;</span>
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre></div><p>For a full example see <a href=tenantConfig-example.json>tenantConfig-example.json</a> (<a href=schemas/qwc-config-generator.json>JSON schema</a>).</p><p><em>NOTE:</em> the QWC2 themes config is defined under <code>themesConfig</code> in the ConfigGenerator config and not in a separate file.</p><p>QGIS projects can be automatically detected when <code>qgis_projects_scan_base_dir</code> is defined.
+For adding these projects, the following settings need to be defined in <code>themesConfig</code>.</p><ul><li><code>defaultBackgroundLayers</code></li><li><code>defaultSearchProviders</code></li><li><code>defaultMapCrs</code></li></ul><p>Additionally the config generator can also autodetect thumbnails when adding projects that meet the following criteria:</p><ul><li><code>qwc2_base_dir</code> is defined in the ConfigGenerator config</li><li>the thumbnail of the project is located in the QWC2 thumbnail directory (Example: <code>/qwc/assets/img/mapthumbs</code>)</li><li>the thumbnail image has the same filename as the QGIS project</li></ul><p>The config generator also has the ability to split a layer, that has been <a href=https://docs.qgis.org/3.16/en/docs/training_manual/vector_classification/classification.html>classified</a> with QGIS, into multiple layers and move them into a new group (The group name will be the original layer name). The following steps need to be done, to activate this functionality:</p><ol><li><p>Set ConfigGenerator config: <code>"split_categorized_layers": true</code></p></li><li><p>Define the environment variable <code>QGIS_APPLICATION_PREFIX_PATH</code> (default: <code>/usr</code>). The prefix path is the location where QGIS is installed on your system. This is needed by the split function, because it uses the <code>qgis.core</code> library.</p></li></ol><p><em>NOTE:</em> The Search service config takes its resources directly from the ConfigGenerator config. Its Permissions are collected from the ConfigDB (<code>solr_facet</code> resources), unless they are defined in the ConfigGenerator config.</p><p><em>NOTE:</em> the FeatureInfo service config may take additional WMS service resources and permissions directly from the ConfigGenerator config, e.g. for external info layers. Its Permissions are collected from the ConfigDB (<code>feature_info_service</code>, <code>feature_info_layer</code> resources), unless they are defined in the ConfigGenerator config. Example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;featureInfo&#34;</span>,
+      <span style=color:#f92672>&#34;config&#34;</span>: {
+        <span style=color:#f92672>&#34;default_qgis_server_url&#34;</span>: <span style=color:#e6db74>&#34;http://qwc-qgis-server/ows/&#34;</span>
+      },
+      <span style=color:#f92672>&#34;resources&#34;</span>: {
+        <span style=color:#f92672>&#34;wms_services&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;external_info_layers&#34;</span>,
+            <span style=color:#f92672>&#34;root_layer&#34;</span>: {
+              <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;external_info_layers&#34;</span>,
+              <span style=color:#f92672>&#34;layers&#34;</span>: [
+                {
+                  <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;example_info_layer&#34;</span>,
+                  <span style=color:#f92672>&#34;title&#34;</span>: <span style=color:#e6db74>&#34;External info layer&#34;</span>,
+                  <span style=color:#f92672>&#34;attributes&#34;</span>: [
+                    {
+                      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;name&#34;</span>
+                    },
+                    {
+                      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;geometry&#34;</span>
+                    }
+                  ],
+                  <span style=color:#f92672>&#34;info_template&#34;</span>: {
+                    <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;wms&#34;</span>,
+                    <span style=color:#f92672>&#34;wms_url&#34;</span>: <span style=color:#e6db74>&#34;https://example.com/wms/demo&#34;</span>
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      <span style=color:#f92672>&#34;permissions&#34;</span>: [
+        {
+          <span style=color:#f92672>&#34;role&#34;</span>: <span style=color:#e6db74>&#34;public&#34;</span>,
+          <span style=color:#f92672>&#34;permissions&#34;</span>: {
+            <span style=color:#f92672>&#34;wms_services&#34;</span>: [
+              {
+                <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;external_info_layers&#34;</span>,
+                <span style=color:#f92672>&#34;layers&#34;</span>: [
+                  {
+                    <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;external_info_layers&#34;</span>
+                  },
+                  {
+                    <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;example_info_layer&#34;</span>,
+                    <span style=color:#f92672>&#34;attributes&#34;</span>: [<span style=color:#e6db74>&#34;name&#34;</span>, <span style=color:#e6db74>&#34;geometry&#34;</span>],
+                    <span style=color:#f92672>&#34;info_template&#34;</span>: <span style=color:#66d9ef>true</span>
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+</code></pre></div><h3 id=permissions>Permissions</h3><p>Using the <code>permissions_default_allow</code> setting, some resources can be set to be permitted or restricted by default if no permissions are set (default: <code>true</code>). Affected resources are <code>map</code>, <code>layer</code>, <code>print_template</code> and <code>viewer_task</code>.</p><ul><li>i.e. <code>permissions_default_allow: true</code>: all maps, layers and attributes are permitted by default</li><li>i.e. <code>permissions_default_allow: false</code>: maps and layers are only available if their resources and permissions are explicitly configured; though attributes are still permitted by default</li></ul><h3 id=custom-resource-types>Custom resource types</h3><p>If you want to define custom resource types for a custom service, you can add a record for the resource type to the configdb</p><pre><code>INSERT INTO qwc_config.resource_types(name, description, list_order) values ('&lt;resource_name&gt;', '&lt;resource_description&gt;', &lt;list_order&gt;);
+</code></pre><p>and then add it to the <code>custom_resource_types</code> setting.</p><h2 id=usage>Usage</h2><h3 id=script>Script</h3><p>Show command options:</p><pre><code>python config_generator_cli.py --help
+</code></pre><p>Generate both service configs and permissions:</p><pre><code>python config_generator_cli.py ./tenantConfig.json all
+</code></pre><p>Generate service config files:</p><pre><code>python config_generator_cli.py ./tenantConfig.json service_configs
+</code></pre><p>Generate permissions file:</p><pre><code>python config_generator_cli.py ./tenantConfig.json permissions
+</code></pre><h3 id=service>Service</h3><p>Set the <code>INPUT_CONFIG_PATH</code> environment variable to the base dir for reading generator config files (default: <code>config-in/</code>).
+Set the <code>OUTPUT_CONFIG_PATH</code> environment variable to the base dir for writing service configs and permissions (default: <code>/tmp/</code>).</p><p><em>NOTE:</em> Requires write permissions for config-generator docker user (<code>www-data</code>) in <code>OUTPUT_CONFIG_PATH</code> for writing service configs and permissions.</p><p>Base URL:</p><pre><code>http://localhost:5010/
+</code></pre><p>Generate both service configs and permissions for <code>default</code> tenant:</p><pre><code>curl -X POST &quot;http://localhost:5010/generate_configs?tenant=default&quot;
+</code></pre><h2 id=development>Development</h2><p>Create a virtual environment:</p><pre><code>virtualenv --python=/usr/bin/python3 --system-site-package .venv
+</code></pre><p>Activate virtual environment:</p><pre><code>source .venv/bin/activate
+</code></pre><p>Install requirements (<em>NOTE:</em> additionally requires modules from <code>python-qgis</code>):</p><pre><code>pip install -r requirements.txt
+</code></pre><p>Run Demo-DB and QGIS Server:</p><pre><code>cd ../qwc-docker &amp;&amp; docker-compose up -d qwc-postgis qwc-qgis-server
+</code></pre><p>Generate service configs and permissions for Docker:</p><pre><code>python config_generator_cli.py ./tenantConfig-example.json all
+</code></pre><footer class=footline></footer></div></div><div id=navigation></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1632148594></script><script src=/js/perfect-scrollbar.min.js?1632148594></script><script src=/js/perfect-scrollbar.jquery.min.js?1632148594></script><script src=/js/jquery.sticky.js?1632148594></script><script src=/js/featherlight.min.js?1632148594></script><script src=/js/highlight.pack.js?1632148594></script><script>hljs.initHighlightingOnLoad();</script><script src=/js/modernizr.custom-3.6.0.js?1632148594></script><script src=/js/learn.js?1632148594></script><script src=/js/hugo-learn.js?1632148594></script></body></html>

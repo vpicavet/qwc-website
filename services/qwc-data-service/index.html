@@ -1,0 +1,199 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.68.3"><meta name=description content="Documentation QWC2 and QWC services"><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon><title>QWC Data Service :: QWC2 Documentation</title><link href=/css/nucleus.css?1632148594 rel=stylesheet><link href=/css/fontawesome-all.min.css?1632148594 rel=stylesheet><link href=/css/hybrid.css?1632148594 rel=stylesheet><link href=/css/featherlight.min.css?1632148594 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1632148594 rel=stylesheet><link href=/css/auto-complete.css?1632148594 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1632148594 rel=stylesheet><link href=/css/theme.css?1632148594 rel=stylesheet><link href=/css/tabs.css?1632148594 rel=stylesheet><link href=/css/hugo-theme.css?1632148594 rel=stylesheet><link href=/css/theme-green.css?1632148594 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1632148594></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/services/qwc-data-service/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href><img src=/images/qwc-logo.png height=50></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1632148594></script><script type=text/javascript src=/js/auto-complete.js?1632148594></script><script type=text/javascript>var baseurl="http:\/\/example.org\/";</script><script type=text/javascript src=/js/search.js?1632148594></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/overview/ title=Overview class=dd-item><a href=/overview/>Overview</a><ul><li data-nav-id=/overview/overview.de/ title=Übersicht class=dd-item><a href=/overview/overview.de/>Übersicht</a></li></ul></li><li data-nav-id=/quick-start/ title="Quick Start" class=dd-item><a href=/quick-start/>Quick Start</a></li><li data-nav-id=/configuration/ title=Configuration class=dd-item><a href=/configuration/>Configuration</a></li><li data-nav-id=/viewer/ title="QGIS Web Client 2" class=dd-item><a href=/viewer/>Viewer</a></li><li data-nav-id=/services/ title=Services class="dd-item
+parent"><a href=/services/>Services</a><ul><li data-nav-id=/services/qwc-map-viewer/ title="QWC Map Viewer Service" class=dd-item><a href=/services/qwc-map-viewer/>qwc-map-viewer</a></li><li data-nav-id=/services/qwc-ogc-service/ title="QWC OGC Service" class=dd-item><a href=/services/qwc-ogc-service/>qwc-ogc-service</a></li><li data-nav-id=/services/qwc-feature-info-service/ title="QWC FeatureInfo Service" class=dd-item><a href=/services/qwc-feature-info-service/>qwc-feature-info-service</a></li><li data-nav-id=/services/qwc-fulltext-search-service/ title="QWC Fulltext Search Service" class=dd-item><a href=/services/qwc-fulltext-search-service/>qwc-fulltext-search-service</a></li><li data-nav-id=/services/qwc-legend-service/ title="QWC Legend Service" class=dd-item><a href=/services/qwc-legend-service/>qwc-legend-service</a></li><li data-nav-id=/services/qwc-permalink-service/ title="QWC Permalink Service" class=dd-item><a href=/services/qwc-permalink-service/>qwc-permalink-service</a></li><li data-nav-id=/services/qwc-print-service/ title="QWC Print service" class=dd-item><a href=/services/qwc-print-service/>qwc-print-service</a></li><li data-nav-id=/services/qwc-mapinfo-service/ title="QWC MapInfo Service" class=dd-item><a href=/services/qwc-mapinfo-service/>qwc-mapinfo-service</a></li><li data-nav-id=/services/qwc-data-service/ title="QWC Data Service" class="dd-item active"><a href=/services/qwc-data-service/>qwc-data-service</a></li><li data-nav-id=/services/qwc-document-service/ title="Document service" class=dd-item><a href=/services/qwc-document-service/>qwc-document-service</a></li><li data-nav-id=/services/qwc-elevation-service/ title="QWC Elevation Service" class=dd-item><a href=/services/qwc-elevation-service/>qwc-elevation-service</a></li><li data-nav-id=/services/qwc-admin-gui/ title="QWC Admin GUI" class=dd-item><a href=/services/qwc-admin-gui/>qwc-admin-gui</a></li><li data-nav-id=/services/qwc-registration-gui/ title="Registration GUI" class=dd-item><a href=/services/qwc-registration-gui/>qwc-registration-gui</a></li><li data-nav-id=/services/qwc-config-generator/ title="QWC Config Generator" class=dd-item><a href=/services/qwc-config-generator/>qwc-config-generator</a></li></ul></li><li data-nav-id=/authentication/ title=Authentication class=dd-item><a href=/authentication/>Authentication</a><ul><li data-nav-id=/authentication/qwc-db-auth/ title="DB Authentication Service" class=dd-item><a href=/authentication/qwc-db-auth/>qwc-db-auth</a></li><li data-nav-id=/authentication/qwc-ldap-auth/ title="LDAP Authentication Service" class=dd-item><a href=/authentication/qwc-ldap-auth/>qwc-ldap-auth</a></li></ul></li></ul><section id=footer></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/qwc-services/qwc-website/edit/main/content/services/qwc-data-service.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/>QWC2 / QWC Services</a> > <a href=/services/>Services</a> > QWC Data Service</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#setup>Setup</a><ul><li><a href=#qwc_demo-example>qwc_demo example</a></li></ul></li><li><a href=#configuration>Configuration</a><ul><li><a href=#data-service-config>Data Service config</a></li><li><a href=#permissions>Permissions</a></li><li><a href=#overview>Overview</a></li></ul></li><li><a href=#usage>Usage</a></li><li><a href=#docker-usage>Docker usage</a></li><li><a href=#development>Development</a></li><li><a href=#testing>Testing</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>QWC Data Service</h1><p>Edit spatial and unlocated features of datasets via GeoJSON.</p><p><strong>Note:</strong> requires a PostGIS database for reading and writing features</p><h2 id=setup>Setup</h2><p>Uses PostgreSQL connection service or connection to a PostGIS database.
+This connection&rsquo;s user requires read and write access to the configured tables.</p><h3 id=qwc_demo-example>qwc_demo example</h3><p>Uses PostgreSQL connection service <code>qwc_geodb</code> (GeoDB).
+The user <code>qwc_service_write</code> requires read and write access to the configured tables
+of the data layers from the QGIS project <code>qwc_demo.qgs</code>.</p><p>Setup PostgreSQL connection service file <code>~/.pg_service.conf</code>:</p><pre><code>host=localhost
+port=5439
+dbname=qwc_demo
+user=qwc_service_write
+password=qwc_service_write
+sslmode=disable
+</code></pre><h2 id=configuration>Configuration</h2><p>The static config and permission files are stored as JSON files in <code>$CONFIG_PATH</code> with subdirectories for each tenant,
+e.g. <code>$CONFIG_PATH/default/*.json</code>. The default tenant name is <code>default</code>.</p><h3 id=data-service-config>Data Service config</h3><ul><li><a href=schemas/qwc-data-service.json>JSON schema</a></li><li>File location: <code>$CONFIG_PATH/&lt;tenant>/dataConfig.json</code></li></ul><p>Example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/qwc-services/qwc-data-service/v2/schemas/qwc-data-service.json&#34;</span>,
+  <span style=color:#f92672>&#34;service&#34;</span>: <span style=color:#e6db74>&#34;data&#34;</span>,
+  <span style=color:#f92672>&#34;config&#34;</span>: {
+    <span style=color:#f92672>&#34;attachments_base_dir&#34;</span>: <span style=color:#e6db74>&#34;/tmp/qwc_attachments/&#34;</span>,
+    <span style=color:#f92672>&#34;allowed_attachment_extensions&#34;</span>: <span style=color:#e6db74>&#34;.bmp,.jpg,.pdf&#34;</span>,
+    <span style=color:#f92672>&#34;max_attachment_file_size&#34;</span>: <span style=color:#ae81ff>10485760</span>,
+    <span style=color:#f92672>&#34;upload_user_field_suffix&#34;</span>: <span style=color:#e6db74>&#34;uploaduser&#34;</span>,
+    <span style=color:#f92672>&#34;edit_user_field&#34;</span>: <span style=color:#e6db74>&#34;edituser&#34;</span>,
+    <span style=color:#f92672>&#34;edit_timestamp_field&#34;</span>: <span style=color:#e6db74>&#34;edittimestamp&#34;</span>
+  },
+  <span style=color:#f92672>&#34;resources&#34;</span>: {
+    <span style=color:#f92672>&#34;datasets&#34;</span>: [
+      {
+        <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;qwc_demo.edit_points&#34;</span>,
+        <span style=color:#f92672>&#34;db_url&#34;</span>: <span style=color:#e6db74>&#34;postgresql:///?service=qwc_geodb&#34;</span>,
+        <span style=color:#f92672>&#34;schema&#34;</span>: <span style=color:#e6db74>&#34;qwc_geodb&#34;</span>,
+        <span style=color:#f92672>&#34;table_name&#34;</span>: <span style=color:#e6db74>&#34;edit_points&#34;</span>,
+        <span style=color:#f92672>&#34;primary_key&#34;</span>: <span style=color:#e6db74>&#34;id&#34;</span>,
+        <span style=color:#f92672>&#34;fields&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;id&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;integer&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;min&#34;</span>: <span style=color:#ae81ff>-2147483648</span>,
+              <span style=color:#f92672>&#34;max&#34;</span>: <span style=color:#ae81ff>2147483647</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;name&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;character varying&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;maxlength&#34;</span>: <span style=color:#ae81ff>32</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;description&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;text&#34;</span>
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;num&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;integer&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;min&#34;</span>: <span style=color:#ae81ff>-2147483648</span>,
+              <span style=color:#f92672>&#34;max&#34;</span>: <span style=color:#ae81ff>2147483647</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;value&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;double precision&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;pattern&#34;</span>: <span style=color:#e6db74>&#34;[0-9]+([\\.,][0-9]+)?&#34;</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;type&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;smallint&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;min&#34;</span>: <span style=color:#ae81ff>-32768</span>,
+              <span style=color:#f92672>&#34;max&#34;</span>: <span style=color:#ae81ff>32767</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;amount&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;numeric&#34;</span>,
+            <span style=color:#f92672>&#34;constraints&#34;</span>: {
+              <span style=color:#f92672>&#34;numeric_precision&#34;</span>: <span style=color:#ae81ff>5</span>,
+              <span style=color:#f92672>&#34;numeric_scale&#34;</span>: <span style=color:#ae81ff>2</span>,
+              <span style=color:#f92672>&#34;min&#34;</span>: <span style=color:#ae81ff>-999.99</span>,
+              <span style=color:#f92672>&#34;max&#34;</span>: <span style=color:#ae81ff>999.99</span>,
+              <span style=color:#f92672>&#34;step&#34;</span>: <span style=color:#ae81ff>0.01</span>
+            }
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;validated&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;boolean&#34;</span>
+          },
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;datetime&#34;</span>,
+            <span style=color:#f92672>&#34;data_type&#34;</span>: <span style=color:#e6db74>&#34;timestamp without time zone&#34;</span>
+          }
+        ],
+        <span style=color:#f92672>&#34;geometry&#34;</span>: {
+          <span style=color:#f92672>&#34;geometry_column&#34;</span>: <span style=color:#e6db74>&#34;geom&#34;</span>,
+          <span style=color:#f92672>&#34;geometry_type&#34;</span>: <span style=color:#e6db74>&#34;POINT&#34;</span>,
+          <span style=color:#f92672>&#34;srid&#34;</span>: <span style=color:#ae81ff>3857</span>
+        }
+      }
+    ]
+  }
+}
+</code></pre></div><h3 id=permissions>Permissions</h3><ul><li><a href=https://github.com/qwc-services/qwc-services-core/blob/master/schemas/qwc-services-permissions.json>JSON schema</a></li><li>File location: <code>$CONFIG_PATH/&lt;tenant>/permissions.json</code></li></ul><p>Example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/qwc-services/qwc-services-core/master/schemas/qwc-services-permissions.json&#34;</span>,
+  <span style=color:#f92672>&#34;users&#34;</span>: [
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;demo&#34;</span>,
+      <span style=color:#f92672>&#34;groups&#34;</span>: [<span style=color:#e6db74>&#34;demo&#34;</span>],
+      <span style=color:#f92672>&#34;roles&#34;</span>: []
+    }
+  ],
+  <span style=color:#f92672>&#34;groups&#34;</span>: [
+    {
+      <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;demo&#34;</span>,
+      <span style=color:#f92672>&#34;roles&#34;</span>: [<span style=color:#e6db74>&#34;demo&#34;</span>]
+    }
+  ],
+  <span style=color:#f92672>&#34;roles&#34;</span>: [
+    {
+      <span style=color:#f92672>&#34;role&#34;</span>: <span style=color:#e6db74>&#34;public&#34;</span>,
+      <span style=color:#f92672>&#34;permissions&#34;</span>: {
+        <span style=color:#f92672>&#34;data_datasets&#34;</span>: [
+          {
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;qwc_demo.edit_points&#34;</span>,
+            <span style=color:#f92672>&#34;attributes&#34;</span>: [
+              <span style=color:#e6db74>&#34;id&#34;</span>,
+              <span style=color:#e6db74>&#34;name&#34;</span>,
+              <span style=color:#e6db74>&#34;description&#34;</span>,
+              <span style=color:#e6db74>&#34;num&#34;</span>,
+              <span style=color:#e6db74>&#34;value&#34;</span>,
+              <span style=color:#e6db74>&#34;type&#34;</span>,
+              <span style=color:#e6db74>&#34;amount&#34;</span>,
+              <span style=color:#e6db74>&#34;validated&#34;</span>,
+              <span style=color:#e6db74>&#34;datetime&#34;</span>
+            ],
+            <span style=color:#f92672>&#34;writable&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;creatable&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;readable&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;updatable&#34;</span>: <span style=color:#66d9ef>true</span>,
+            <span style=color:#f92672>&#34;deletable&#34;</span>: <span style=color:#66d9ef>true</span>
+          }
+        ]
+      }
+    }
+  ]
+}
+</code></pre></div><h3 id=overview>Overview</h3><pre><code>                                 QWC2 build:                                      Public:
++--------------------+           +------------+
+| themesConfig.json  |           |            |
+|          ^         +-----------&gt; yarn build +----------------------------------&gt; (themes.json)
+|          |         |       +---&gt;            |
+|          +         +-----+ |   +------------+       +---------------+
+|        (edit.json) |     | |                        |               |
++--------------------+     | +------------------------+ QGIS Server   +----------&gt; WMS/WFS
+                           | |      Capabilities      |               |
++--------------------+     | |                        +------^--------+
+| ui Files           +-----------------------------------------------------------&gt; assets/*.ui
++--------------------+     | |                               |
+                           | |                               |                    +------------------+
++--------------------+     | |                               +                    |                  +--&gt; html/js/css/assets
+| qgs Files          +--+-------------------------------&gt; *.qgs         +---------&gt; qwc-map-viewer   |
++--------------------+  |  | |                                          |         |                  +--&gt; config.json/themes.json
+                        |  | |                                          |         +------------------+
+                        |  | |                                          |
+                        |  | |                                          |         +------------------+
+                        |  | |                                          |         |                  |  REST-API
+    +---------+         |  | |                                          +---------&gt; qwc-data-service &lt;---------------&gt;
+    |         |         |  | |   +------------+                         |         |                  |
+    | config- |         |  | +---&gt;            |                         +         +------------------+
+    |   DB    | +-------v--v-----&gt; Config-    +------&gt; [service].json+permissions.json
+    |         |                  | Generator  |
+    |         |                  |            |
+    +---------+                  +------------+
+</code></pre><p>Edit forms:</p><ul><li><p>Edit forms are automatically created from field information extracted from QGS files, according to the attribute form configuration:</p><ul><li>For autogenerated attribute forms, a flat edit form is in QWC2</li><li>Drag and Drop designer forms are automatically translated to Qt Designer forms in the <code>assets/forms/autogen</code> and loaded by QWC2</li><li>UI file are copied to the <code>assets/forms/autogen</code> folder and loaded by QWC2</li></ul></li><li><p>You can also manually create Qt Designer forms to use exclusively with QWC2 as follows:</p><ul><li><p>For the desired theme, add a block as follows in the theme block of the <code>tenantConfig.json</code>:</p><pre><code>&quot;editConfig&quot;:{
+  &quot;&lt;layername&gt;&quot;:{
+    &quot;editDataset&quot;:&quot;&lt;mapprefix&gt;.&lt;datasetname&gt;&quot;,
+    &quot;layerName&quot;:&quot;&lt;Display name&gt;&quot;,
+    &quot;geomType&quot;:&quot;&lt;Point|LineString|Polygon&gt;&quot;,
+    &quot;form&quot;:&quot;:/forms/form.ui&quot;
+  }
+}
+</code></pre><p>Note: <code>:/</code> in the <code>form</code> property is resolved to the assets directory of the viewer.</p></li><li><p>Create the designer form in Qt-Designer, using the dataset field names as edit widget names.</p></li></ul></li><li><p><em>Note</em>: In general, for tables with an auto-incrementing primary key field, you&rsquo;ll want to set the attribute form widget type to &ldquo;Hidden&rdquo; in the QGIS layer properties. This way, the data-service won&rsquo;t block the commit if the feature is comitted with an empty PK field value.</p></li></ul><p>Logging the user/timestamp of a mutation:</p><ul><li>If you set <code>edit_user_field</code> in the data service config, the username of the last user who performed a mutation to a record with be logged to the <code>&lt;edit_user_field></code> field of the record.</li><li>If you set <code>edit_timestamp_field</code> in the data service config, the timestamp of the last mutation to a record will be logged to the <code>&lt;edit_timestamp_field></code> field of the record.</li></ul><p>File uploads:</p><ul><li>For autogenerated edit forms, in QGIS create a virtual field named <code>&lt;fieldname>__upload</code> for the desired layer. <code>&lt;fieldname></code> must be equal to an existing field of the dataset of type string. As field expression, you can set a string <code>'&lt;extensions>'</code>, with <code>&lt;extensions></code> a comma separated list of suggested file extensions, i.e. <code>.png,.jpg</code>.</li><li>For Drag and Drop designer forms, set the widget type to Attachment.</li><li>For manually created Qt Designed Ui forms, use a <code>QLineEdit</code> widget named <code>&lt;fieldname>__upload</code>, and optionally as the text value of the <code>QLineEdit</code> set a comma separated list of suggested file extensions.</li><li><em>Note</em>: Make sure the client uses the EditingInterface.js shipped with <a href=https://github.com/qgis/qwc2/commit/f053fdceba4a2d8112fb516c793702b9fd118609>QWC2 submodule f053fdc or newer</a> to support file uploads.</li></ul><p>If you set <code>upload_user_field_suffix</code> in the data service config, the username of the last user who performed an upload to <code>&lt;fieldname></code> will be logged to <code>&lt;fieldname>__&lt;upload_user_field_suffix></code>. You can set the respective field types to hidden in the QGIS layer properties to avoid them showing up in the autogenerated edit forms.</p><p>1:N relations:</p><ul><li><em>Note</em>: 1:N relations are currently only supported in manually created Qt-Designed Ui forms.</li><li>In your Ui form, create a <code>QWidget</code> named according to the pattern <code>nrel__&lt;reltablename>__&lt;foreignkeyfield></code>, where <code>&lt;reltablename></code> is the name of the relation table and <code>&lt;foreignkeyfield></code> the name of the foreign key field in the relation table.</li><li>Inside this widget, add the edit widgets for the values of the relation table. Name the widgets <code>&lt;reltablename>__&lt;fieldname></code>. These edit widgets will be replicated for each relation record.</li><li><em>Note:</em> The relation table needs to be added as a (geometryless) table to the QGIS Project. You also need to set appropriate permissions for the relation table dataset in the QWC admin backend.</li></ul><p>Key-value relations:</p><ul><li>For Drag and Drop designer forms, use widgets of type Value Relation. In the generated designer form, the naming convention indicated below is used.</li><li>In a manually created Qt-Designer Ui form, you can use key-value relations for combo box entries by naming the <code>QComboBox</code> widget according to the following pattern: <code>kvrel__&lt;fieldname>__&lt;kvtablename>__&lt;kvtable_valuefield>__&lt;kvtable_labelfield></code>. <code>&lt;kvtablename></code> refers to a table containing a field called <code>&lt;kvtable_valuefield></code> for the value of the entry and a field <code>&lt;kvtable_labelfield></code> for the label of the entry. For key-value relations inside a 1:N relation, use <code>kvrel__&lt;reltablename>__&lt;fieldname>__&lt;kvtablename>__&lt;kvtable_valuefield>__&lt;kvtable_labelfield></code>. <code>&lt;kvtablename></code></li><li><em>Note:</em> In any case, the relation table needs to be added as a (geometryless) table to the QGIS Project. You also need to set appropriate permissions for the relation table dataset in the QWC admin backend.</li></ul><p>Data service configuration:</p><ul><li>DB connection information, table and column names and primary key information are extracted from QGS files</li><li>Data contraints are extracted from QGS files</li><li>Column types and additional constraints are read from the the geo-DB</li></ul><p>Data read/write:</p><ul><li>QWC2 issues data-service API requests for reading und writing</li></ul><h2 id=usage>Usage</h2><p>Set the <code>CONFIG_PATH</code> environment variable to the path containing the service config and permission files when starting this service (default: <code>config</code>).</p><p>Base URL:</p><pre><code>http://localhost:5012/
+</code></pre><p>Service API:</p><pre><code>http://localhost:5012/api/
+</code></pre><p>Sample requests:</p><pre><code>curl 'http://localhost:5012/qwc_demo.edit_points/'
+</code></pre><h2 id=docker-usage>Docker usage</h2><p>To run this docker image you will need a PostGIS database. For testing purposes you can use the demo DB.</p><p>The following steps explain how to download the demo DB docker image and how to run the <code>qwc-data-service</code> with <code>docker-compose</code>.</p><p><strong>Step 1: Clone qwc-docker</strong></p><pre><code>git clone https://github.com/qwc-services/qwc-docker
+cd qwc-docker
+</code></pre><p><strong>Step 2: Create docker-compose.yml file</strong></p><pre><code>cp docker-compose-example.yml docker-compose.yml
+</code></pre><p><strong>Step 3: Start docker containers</strong></p><pre><code>docker-compose up qwc-data-service
+</code></pre><p>For more information please visit: <a href=https://github.com/qwc-services/qwc-docker>https://github.com/qwc-services/qwc-docker</a></p><h2 id=development>Development</h2><p>Create a virtual environment:</p><pre><code>virtualenv --python=/usr/bin/python3 --system-site-packages .venv
+</code></pre><p>Without system packages:</p><pre><code>virtualenv --python=/usr/bin/python3 .venv
+</code></pre><p>Activate virtual environment:</p><pre><code>source .venv/bin/activate
+</code></pre><p>Install requirements:</p><pre><code>pip install -r requirements.txt
+</code></pre><p>Start local service:</p><pre><code>CONFIG_PATH=/PATH/TO/CONFIGS/ python server.py
+</code></pre><h2 id=testing>Testing</h2><p>Run all tests:</p><pre><code>python test.py
+</code></pre><p>Run single test module:</p><pre><code>python -m unittest tests.feature_validation_tests
+</code></pre><p>Run single test case:</p><pre><code>python -m unittest tests.feature_validation_tests.FeatureValidationTestCase
+</code></pre><p>Run single test method:</p><pre><code>python -m unittest tests.feature_validation_tests.FeatureValidationTestCase.test_field_constraints
+</code></pre><footer class=footline></footer></div></div><div id=navigation></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1632148594></script><script src=/js/perfect-scrollbar.min.js?1632148594></script><script src=/js/perfect-scrollbar.jquery.min.js?1632148594></script><script src=/js/jquery.sticky.js?1632148594></script><script src=/js/featherlight.min.js?1632148594></script><script src=/js/highlight.pack.js?1632148594></script><script>hljs.initHighlightingOnLoad();</script><script src=/js/modernizr.custom-3.6.0.js?1632148594></script><script src=/js/learn.js?1632148594></script><script src=/js/hugo-learn.js?1632148594></script></body></html>
