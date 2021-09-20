@@ -1,7 +1,234 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.68.3"><meta name=description content="Documentation QWC2 and QWC services"><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon><title>DB Authentication Service :: QWC2 Documentation</title><link href=/qwc-website/css/nucleus.css?1632150138 rel=stylesheet><link href=/qwc-website/css/fontawesome-all.min.css?1632150138 rel=stylesheet><link href=/qwc-website/css/hybrid.css?1632150138 rel=stylesheet><link href=/qwc-website/css/featherlight.min.css?1632150138 rel=stylesheet><link href=/qwc-website/css/perfect-scrollbar.min.css?1632150138 rel=stylesheet><link href=/qwc-website/css/auto-complete.css?1632150138 rel=stylesheet><link href=/qwc-website/css/atom-one-dark-reasonable.css?1632150138 rel=stylesheet><link href=/qwc-website/css/theme.css?1632150138 rel=stylesheet><link href=/qwc-website/css/tabs.css?1632150138 rel=stylesheet><link href=/qwc-website/css/hugo-theme.css?1632150138 rel=stylesheet><link href=/qwc-website/css/theme-green.css?1632150138 rel=stylesheet><script src=/qwc-website/js/jquery-3.3.1.min.js?1632150138></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/qwc-website/authentication/qwc-db-auth/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href><img src=/images/qwc-logo.png height=50></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/qwc-website/js/lunr.min.js?1632150138></script><script type=text/javascript src=/qwc-website/js/auto-complete.js?1632150138></script><script type=text/javascript>var baseurl="https:\/\/qwc-services.github.io\/qwc-website";</script><script type=text/javascript src=/qwc-website/js/search.js?1632150138></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/qwc-website/overview/ title=Overview class=dd-item><a href=/qwc-website/overview/>Overview</a><ul><li data-nav-id=/qwc-website/overview/overview.de/ title=Übersicht class=dd-item><a href=/qwc-website/overview/overview.de/>Übersicht</a></li></ul></li><li data-nav-id=/qwc-website/quick-start/ title="Quick Start" class=dd-item><a href=/qwc-website/quick-start/>Quick Start</a></li><li data-nav-id=/qwc-website/configuration/ title=Configuration class=dd-item><a href=/qwc-website/configuration/>Configuration</a></li><li data-nav-id=/qwc-website/viewer/ title="QGIS Web Client 2" class=dd-item><a href=/qwc-website/viewer/>Viewer</a></li><li data-nav-id=/qwc-website/services/ title=Services class=dd-item><a href=/qwc-website/services/>Services</a><ul><li data-nav-id=/qwc-website/services/qwc-map-viewer/ title="QWC Map Viewer Service" class=dd-item><a href=/qwc-website/services/qwc-map-viewer/>qwc-map-viewer</a></li><li data-nav-id=/qwc-website/services/qwc-ogc-service/ title="QWC OGC Service" class=dd-item><a href=/qwc-website/services/qwc-ogc-service/>qwc-ogc-service</a></li><li data-nav-id=/qwc-website/services/qwc-feature-info-service/ title="QWC FeatureInfo Service" class=dd-item><a href=/qwc-website/services/qwc-feature-info-service/>qwc-feature-info-service</a></li><li data-nav-id=/qwc-website/services/qwc-fulltext-search-service/ title="QWC Fulltext Search Service" class=dd-item><a href=/qwc-website/services/qwc-fulltext-search-service/>qwc-fulltext-search-service</a></li><li data-nav-id=/qwc-website/services/qwc-legend-service/ title="QWC Legend Service" class=dd-item><a href=/qwc-website/services/qwc-legend-service/>qwc-legend-service</a></li><li data-nav-id=/qwc-website/services/qwc-permalink-service/ title="QWC Permalink Service" class=dd-item><a href=/qwc-website/services/qwc-permalink-service/>qwc-permalink-service</a></li><li data-nav-id=/qwc-website/services/qwc-print-service/ title="QWC Print service" class=dd-item><a href=/qwc-website/services/qwc-print-service/>qwc-print-service</a></li><li data-nav-id=/qwc-website/services/qwc-mapinfo-service/ title="QWC MapInfo Service" class=dd-item><a href=/qwc-website/services/qwc-mapinfo-service/>qwc-mapinfo-service</a></li><li data-nav-id=/qwc-website/services/qwc-data-service/ title="QWC Data Service" class=dd-item><a href=/qwc-website/services/qwc-data-service/>qwc-data-service</a></li><li data-nav-id=/qwc-website/services/qwc-document-service/ title="Document service" class=dd-item><a href=/qwc-website/services/qwc-document-service/>qwc-document-service</a></li><li data-nav-id=/qwc-website/services/qwc-elevation-service/ title="QWC Elevation Service" class=dd-item><a href=/qwc-website/services/qwc-elevation-service/>qwc-elevation-service</a></li><li data-nav-id=/qwc-website/services/qwc-admin-gui/ title="QWC Admin GUI" class=dd-item><a href=/qwc-website/services/qwc-admin-gui/>qwc-admin-gui</a></li><li data-nav-id=/qwc-website/services/qwc-registration-gui/ title="Registration GUI" class=dd-item><a href=/qwc-website/services/qwc-registration-gui/>qwc-registration-gui</a></li><li data-nav-id=/qwc-website/services/qwc-config-generator/ title="QWC Config Generator" class=dd-item><a href=/qwc-website/services/qwc-config-generator/>qwc-config-generator</a></li></ul></li><li data-nav-id=/qwc-website/authentication/ title=Authentication class="dd-item
-parent"><a href=/qwc-website/authentication/>Authentication</a><ul><li data-nav-id=/qwc-website/authentication/qwc-db-auth/ title="DB Authentication Service" class="dd-item active"><a href=/qwc-website/authentication/qwc-db-auth/>qwc-db-auth</a></li><li data-nav-id=/qwc-website/authentication/qwc-ldap-auth/ title="LDAP Authentication Service" class=dd-item><a href=/qwc-website/authentication/qwc-ldap-auth/>qwc-ldap-auth</a></li></ul></li></ul><section id=footer></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Edit this page" href=https://github.com/qwc-services/qwc-website/edit/main/content/authentication/qwc-db-auth.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/qwc-website/>QWC2 / QWC Services</a> > <a href=/qwc-website/authentication/>Authentication</a> > DB Authentication Service</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#configuration>Configuration</a><ul><li><a href=#db-auth-service-config>DB Auth Service config</a></li><li><a href=#two-factor-authentication>Two factor authentication</a></li></ul></li><li><a href=#usage>Usage</a></li><li><a href=#development>Development</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>DB Authentication Service</h1><p>Authentication service with local user database.</p><h2 id=configuration>Configuration</h2><p>The static config files are stored as JSON files in <code>$CONFIG_PATH</code> with subdirectories for each tenant,
-e.g. <code>$CONFIG_PATH/default/*.json</code>. The default tenant name is <code>default</code>.</p><h3 id=db-auth-service-config>DB Auth Service config</h3><ul><li><a href=schemas/qwc-db-auth.json>JSON schema</a></li><li>File location: <code>$CONFIG_PATH/&lt;tenant>/dbAuthConfig.json</code></li></ul><p>Example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+<!doctype html><html lang=en class="js csstransforms3d">
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.88.1">
+<meta name=description content="Documentation QWC2 and QWC services">
+<link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
+<title>DB Authentication Service :: QWC2 Documentation</title>
+<link href=/qwc-website/css/nucleus.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/fontawesome-all.min.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/hybrid.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/featherlight.min.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/perfect-scrollbar.min.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/auto-complete.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/atom-one-dark-reasonable.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/theme.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/tabs.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/hugo-theme.css?1632150309 rel=stylesheet>
+<link href=/qwc-website/css/theme-green.css?1632150309 rel=stylesheet>
+<script src=/qwc-website/js/jquery-3.3.1.min.js?1632150309></script>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
+</head>
+<body data-url=/qwc-website/authentication/qwc-db-auth/>
+<nav id=sidebar>
+<div id=header-wrapper>
+<div id=header>
+<a id=logo href><img src=/images/qwc-logo.png height=50></a>
+</div>
+<div class=searchbox>
+<label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span>
+</div>
+<script type=text/javascript src=/qwc-website/js/lunr.min.js?1632150309></script>
+<script type=text/javascript src=/qwc-website/js/auto-complete.js?1632150309></script>
+<script type=text/javascript>var baseurl="https://qwc-services.github.io/qwc-website/"</script>
+<script type=text/javascript src=/qwc-website/js/search.js?1632150309></script>
+</div>
+<section id=homelinks>
+<ul>
+<li>
+<a class=padding href=/><i class="fas fa-home"></i> Home</a>
+</li>
+</ul>
+</section>
+<div class=highlightable>
+<ul class=topics>
+<li data-nav-id=/qwc-website/overview/ title=Overview class=dd-item>
+<a href=/qwc-website/overview/>
+Overview
+</a>
+<ul>
+<li data-nav-id=/qwc-website/overview/overview.de/ title=Übersicht class=dd-item>
+<a href=/qwc-website/overview/overview.de/>
+Übersicht
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/qwc-website/quick-start/ title="Quick Start" class=dd-item>
+<a href=/qwc-website/quick-start/>
+Quick Start
+</a>
+</li>
+<li data-nav-id=/qwc-website/configuration/ title=Configuration class=dd-item>
+<a href=/qwc-website/configuration/>
+Configuration
+</a>
+</li>
+<li data-nav-id=/qwc-website/viewer/ title="QGIS Web Client 2" class=dd-item>
+<a href=/qwc-website/viewer/>
+Viewer
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/ title=Services class=dd-item>
+<a href=/qwc-website/services/>
+Services
+</a>
+<ul>
+<li data-nav-id=/qwc-website/services/qwc-map-viewer/ title="QWC Map Viewer Service" class=dd-item>
+<a href=/qwc-website/services/qwc-map-viewer/>
+qwc-map-viewer
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-ogc-service/ title="QWC OGC Service" class=dd-item>
+<a href=/qwc-website/services/qwc-ogc-service/>
+qwc-ogc-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-feature-info-service/ title="QWC FeatureInfo Service" class=dd-item>
+<a href=/qwc-website/services/qwc-feature-info-service/>
+qwc-feature-info-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-fulltext-search-service/ title="QWC Fulltext Search Service" class=dd-item>
+<a href=/qwc-website/services/qwc-fulltext-search-service/>
+qwc-fulltext-search-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-legend-service/ title="QWC Legend Service" class=dd-item>
+<a href=/qwc-website/services/qwc-legend-service/>
+qwc-legend-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-permalink-service/ title="QWC Permalink Service" class=dd-item>
+<a href=/qwc-website/services/qwc-permalink-service/>
+qwc-permalink-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-print-service/ title="QWC Print service" class=dd-item>
+<a href=/qwc-website/services/qwc-print-service/>
+qwc-print-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-mapinfo-service/ title="QWC MapInfo Service" class=dd-item>
+<a href=/qwc-website/services/qwc-mapinfo-service/>
+qwc-mapinfo-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-data-service/ title="QWC Data Service" class=dd-item>
+<a href=/qwc-website/services/qwc-data-service/>
+qwc-data-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-document-service/ title="Document service" class=dd-item>
+<a href=/qwc-website/services/qwc-document-service/>
+qwc-document-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-elevation-service/ title="QWC Elevation Service" class=dd-item>
+<a href=/qwc-website/services/qwc-elevation-service/>
+qwc-elevation-service
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-admin-gui/ title="QWC Admin GUI" class=dd-item>
+<a href=/qwc-website/services/qwc-admin-gui/>
+qwc-admin-gui
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-registration-gui/ title="Registration GUI" class=dd-item>
+<a href=/qwc-website/services/qwc-registration-gui/>
+qwc-registration-gui
+</a>
+</li>
+<li data-nav-id=/qwc-website/services/qwc-config-generator/ title="QWC Config Generator" class=dd-item>
+<a href=/qwc-website/services/qwc-config-generator/>
+qwc-config-generator
+</a>
+</li>
+</ul>
+</li>
+<li data-nav-id=/qwc-website/authentication/ title=Authentication class="dd-item
+parent">
+<a href=/qwc-website/authentication/>
+Authentication
+</a>
+<ul>
+<li data-nav-id=/qwc-website/authentication/qwc-db-auth/ title="DB Authentication Service" class="dd-item active">
+<a href=/qwc-website/authentication/qwc-db-auth/>
+qwc-db-auth
+</a>
+</li>
+<li data-nav-id=/qwc-website/authentication/qwc-ldap-auth/ title="LDAP Authentication Service" class=dd-item>
+<a href=/qwc-website/authentication/qwc-ldap-auth/>
+qwc-ldap-auth
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<section id=footer>
+</section>
+</div>
+</nav>
+<section id=body>
+<div id=overlay></div>
+<div class="padding highlightable">
+<div>
+<div id=top-bar>
+<div id=top-github-link>
+<a class=github-link title="Edit this page" href=https://github.com/qwc-services/qwc-website/edit/main/content/authentication/qwc-db-auth.md target=blank>
+<i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Edit this page</span>
+</a>
+</div>
+<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<span id=sidebar-toggle-span>
+<a href=# id=sidebar-toggle data-sidebar-toggle>
+<i class="fas fa-bars"></i>
+</a>
+</span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>
+<a href=/qwc-website/>QWC2 / QWC Services</a> > <a href=/qwc-website/authentication/>Authentication</a> > DB Authentication Service
+</span>
+</div>
+<div class=progress>
+<div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#configuration>Configuration</a>
+<ul>
+<li><a href=#db-auth-service-config>DB Auth Service config</a></li>
+<li><a href=#two-factor-authentication>Two factor authentication</a></li>
+</ul>
+</li>
+<li><a href=#usage>Usage</a></li>
+<li><a href=#development>Development</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div id=head-tags>
+</div>
+<div id=body-inner>
+<h1>
+DB Authentication Service
+</h1>
+<p>Authentication service with local user database.</p>
+<h2 id=configuration>Configuration</h2>
+<p>The static config files are stored as JSON files in <code>$CONFIG_PATH</code> with subdirectories for each tenant,
+e.g. <code>$CONFIG_PATH/default/*.json</code>. The default tenant name is <code>default</code>.</p>
+<h3 id=db-auth-service-config>DB Auth Service config</h3>
+<ul>
+<li><a href=schemas/qwc-db-auth.json>JSON schema</a></li>
+<li>File location: <code>$CONFIG_PATH/&lt;tenant>/dbAuthConfig.json</code></li>
+</ul>
+<p>Example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
   <span style=color:#f92672>&#34;$schema&#34;</span>: <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/qwc-services/qwc-db-auth/master/schemas/qwc-db-auth.json&#34;</span>,
   <span style=color:#f92672>&#34;service&#34;</span>: <span style=color:#e6db74>&#34;db-auth&#34;</span>,
   <span style=color:#f92672>&#34;config&#34;</span>: {
@@ -9,7 +236,9 @@ e.g. <code>$CONFIG_PATH/default/*.json</code>. The default tenant name is <code>
   }
 }
 </code></pre></div><p>Set the <code>MAX_LOGIN_ATTEMPTS</code> environment variable to set the maximum number of
-failed login attempts before sign in is blocked (default: <code>20</code>).</p><p>A minimum password length of <code>8</code> with no other constraints is set by default. Optional password complexity constraints can be set using the following <code>config</code> options:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#e6db74>&#34;config&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> {
+failed login attempts before sign in is blocked (default: <code>20</code>).</p>
+<p>A minimum password length of <code>8</code> with no other constraints is set by default. Optional password complexity constraints can be set using the following <code>config</code> options:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#e6db74>&#34;config&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> {
   <span style=color:#f92672>&#34;password_min_length&#34;</span>: <span style=color:#ae81ff>8</span>,
   <span style=color:#f92672>&#34;password_max_length&#34;</span>: <span style=color:#ae81ff>128</span>,
   <span style=color:#f92672>&#34;password_constraints&#34;</span>: [
@@ -21,21 +250,80 @@ failed login attempts before sign in is blocked (default: <code>20</code>).</p><
   <span style=color:#f92672>&#34;password_min_constraints&#34;</span>: <span style=color:#ae81ff>3</span>,
   <span style=color:#f92672>&#34;password_constraints_message&#34;</span>: <span style=color:#e6db74>&#34;Password must contain at least three of these character types: uppercase letters, lowercase letters, numbers, special characters&#34;</span>
 }
-</code></pre></div><p><code>password_min_length</code> and <code>password_max_length</code> can be set independently. <code>password_constraints</code> is a list of regular expression of which at least <code>password_min_constraints</code> have to match for the password to be valid, otherwise the <code>password_constraints_message</code> is shown. Note that the regular expression have to be JSON escaped and allow only patterns supported by Python&rsquo;s <code>re</code> module.</p><p>Besides the form based DB login, an (insecure) plain POST login is supported. This method can be
+</code></pre></div><p><code>password_min_length</code> and <code>password_max_length</code> can be set independently. <code>password_constraints</code> is a list of regular expression of which at least <code>password_min_constraints</code> have to match for the password to be valid, otherwise the <code>password_constraints_message</code> is shown. Note that the regular expression have to be JSON escaped and allow only patterns supported by Python&rsquo;s <code>re</code> module.</p>
+<p>Besides the form based DB login, an (insecure) plain POST login is supported. This method can be
 activated by setting <code>POST_PARAM_LOGIN=True</code>. User and password are passed as POST parameters
 <code>username</code> and <code>password</code>.
-Usage example: <code>curl -d 'username=demo&password=demo' http://localhost:5017/login</code>.</p><ul><li><code>MAIL_SERVER</code>: default ‘localhost’</li><li><code>MAIL_PORT</code>: default 25</li><li><code>MAIL_USE_TLS</code>: default False</li><li><code>MAIL_USE_SSL</code>: default False</li><li><code>MAIL_DEBUG</code>: default app.debug</li><li><code>MAIL_USERNAME</code>: default None</li><li><code>MAIL_PASSWORD</code>: default None</li><li><code>MAIL_DEFAULT_SENDER</code>: default None</li><li><code>MAIL_MAX_EMAILS</code>: default None</li><li><code>MAIL_SUPPRESS_SEND</code>: default app.testing</li><li><code>MAIL_ASCII_ATTACHMENTS</code>: default False</li></ul><p>In addition the standard Flask <code>TESTING</code> configuration option is used by Flask-Mail in unit tests.</p><h3 id=two-factor-authentication>Two factor authentication</h3><p>Two factor authentication using TOTP can be enabled by setting the environment variable <code>TOTP_ENABLED=True</code>.
-This will require an additional verification token after sign in, based on the user&rsquo;s TOTP secret.</p><p>A personal QR code for setting up the two factor authentication is shown to the user on first sign in (or if the TOTP secret is empty).
-The TOTP issuer name for your application can be set using the environment variable <code>TOTP_ISSUER_NAME="QWC Services"</code>.</p><p>An user&rsquo;s TOTP secret can be reset by clearing it in the Admin GUI user form.</p><h2 id=usage>Usage</h2><p>Run standalone application:</p><pre><code>python server.py
-</code></pre><p>Endpoints:</p><pre><code>http://localhost:5017/login
+Usage example: <code>curl -d 'username=demo&password=demo' http://localhost:5017/login</code>.</p>
+<ul>
+<li><code>MAIL_SERVER</code>: default ‘localhost’</li>
+<li><code>MAIL_PORT</code>: default 25</li>
+<li><code>MAIL_USE_TLS</code>: default False</li>
+<li><code>MAIL_USE_SSL</code>: default False</li>
+<li><code>MAIL_DEBUG</code>: default app.debug</li>
+<li><code>MAIL_USERNAME</code>: default None</li>
+<li><code>MAIL_PASSWORD</code>: default None</li>
+<li><code>MAIL_DEFAULT_SENDER</code>: default None</li>
+<li><code>MAIL_MAX_EMAILS</code>: default None</li>
+<li><code>MAIL_SUPPRESS_SEND</code>: default app.testing</li>
+<li><code>MAIL_ASCII_ATTACHMENTS</code>: default False</li>
+</ul>
+<p>In addition the standard Flask <code>TESTING</code> configuration option is used by Flask-Mail in unit tests.</p>
+<h3 id=two-factor-authentication>Two factor authentication</h3>
+<p>Two factor authentication using TOTP can be enabled by setting the environment variable <code>TOTP_ENABLED=True</code>.
+This will require an additional verification token after sign in, based on the user&rsquo;s TOTP secret.</p>
+<p>A personal QR code for setting up the two factor authentication is shown to the user on first sign in (or if the TOTP secret is empty).
+The TOTP issuer name for your application can be set using the environment variable <code>TOTP_ISSUER_NAME="QWC Services"</code>.</p>
+<p>An user&rsquo;s TOTP secret can be reset by clearing it in the Admin GUI user form.</p>
+<h2 id=usage>Usage</h2>
+<p>Run standalone application:</p>
+<pre><code>python server.py
+</code></pre>
+<p>Endpoints:</p>
+<pre><code>http://localhost:5017/login
 
 http://localhost:5017/logout
-</code></pre><h2 id=development>Development</h2><p>Create a virtual environment:</p><pre><code>virtualenv --python=/usr/bin/python3 .venv
-</code></pre><p>Activate virtual environment:</p><pre><code>source .venv/bin/activate
-</code></pre><p>Install requirements:</p><pre><code>pip install -r requirements.txt
-</code></pre><p>Set the <code>CONFIG_PATH</code> environment variable to the path containing the service config and permission files when starting this service (default: <code>config</code>).</p><pre><code>export CONFIG_PATH=../qwc-docker/demo-config
-</code></pre><p>Configure environment:</p><pre><code>echo FLASK_ENV=development &gt;.flaskenv
+</code></pre>
+<h2 id=development>Development</h2>
+<p>Create a virtual environment:</p>
+<pre><code>virtualenv --python=/usr/bin/python3 .venv
+</code></pre>
+<p>Activate virtual environment:</p>
+<pre><code>source .venv/bin/activate
+</code></pre>
+<p>Install requirements:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<p>Set the <code>CONFIG_PATH</code> environment variable to the path containing the service config and permission files when starting this service (default: <code>config</code>).</p>
+<pre><code>export CONFIG_PATH=../qwc-docker/demo-config
+</code></pre>
+<p>Configure environment:</p>
+<pre><code>echo FLASK_ENV=development &gt;.flaskenv
 export MAIL_SUPPRESS_SEND=True
 export MAIL_DEFAULT_SENDER=from@example.com
-</code></pre><p>Start local service:</p><pre><code> python server.py
-</code></pre><footer class=footline></footer></div></div><div id=navigation></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/qwc-website/js/clipboard.min.js?1632150138></script><script src=/qwc-website/js/perfect-scrollbar.min.js?1632150138></script><script src=/qwc-website/js/perfect-scrollbar.jquery.min.js?1632150138></script><script src=/qwc-website/js/jquery.sticky.js?1632150138></script><script src=/qwc-website/js/featherlight.min.js?1632150138></script><script src=/qwc-website/js/highlight.pack.js?1632150138></script><script>hljs.initHighlightingOnLoad();</script><script src=/qwc-website/js/modernizr.custom-3.6.0.js?1632150138></script><script src=/qwc-website/js/learn.js?1632150138></script><script src=/qwc-website/js/hugo-learn.js?1632150138></script></body></html>
+</code></pre>
+<p>Start local service:</p>
+<pre><code> python server.py
+</code></pre>
+<footer class=footline>
+</footer>
+</div>
+</div>
+<div id=navigation>
+</div>
+</section>
+<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
+</div>
+<script src=/qwc-website/js/clipboard.min.js?1632150309></script>
+<script src=/qwc-website/js/perfect-scrollbar.min.js?1632150309></script>
+<script src=/qwc-website/js/perfect-scrollbar.jquery.min.js?1632150309></script>
+<script src=/qwc-website/js/jquery.sticky.js?1632150309></script>
+<script src=/qwc-website/js/featherlight.min.js?1632150309></script>
+<script src=/qwc-website/js/highlight.pack.js?1632150309></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=/qwc-website/js/modernizr.custom-3.6.0.js?1632150309></script>
+<script src=/qwc-website/js/learn.js?1632150309></script>
+<script src=/qwc-website/js/hugo-learn.js?1632150309></script>
+</body>
+</html>
